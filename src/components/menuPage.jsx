@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy} from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import './menuStyle.css';
 import Navbar from './Navbar';
@@ -20,8 +19,9 @@ function Menu() {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "menu"));
-        const menuData = {};
+      const querySnapshot = await getDocs(query(collection(db, "menu"), orderBy("category", "asc")));
+      const menuData = {};
+
 
         // Process each document in the Firestore collection
         querySnapshot.forEach((doc) => {

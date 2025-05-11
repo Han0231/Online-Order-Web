@@ -27,20 +27,24 @@ function AdminDashboard() {
         setUser(null);
       }
     });
-    // Fetch menu items from Firestore
-    const unsubscribeMenu = onSnapshot(collection(db, "menu"), (snapshot) => {
-      const menuData = [];
-      snapshot.forEach((doc) => {
-        const data = doc.data();
-        menuData.push({ id: doc.id, ...data });
-      });
 
-      setMenuItems(menuData);
-      if (!selectedSection && menuData.length > 0) {
-        setSelectedSection(menuData[0].id);
+    // Fetch menu items from Firestore in ascending order
+    const unsubscribeMenu = onSnapshot(
+      query(collection(db, "menu"), orderBy("category", "asc")),
+      (snapshot) => {
+        const menuData = [];
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          menuData.push({ id: doc.id, ...data });
+        });
+
+        setMenuItems(menuData);
+        if (!selectedSection && menuData.length > 0) {
+          setSelectedSection(menuData[0].id);
+        }
       }
-    });
-    // Fetch orders from Firestore
+    );
+
     const unsubscribeOrders = onSnapshot(
       query(collection(db, "orders"), orderBy("createdAt", "desc")),
       (snapshot) => {
@@ -52,6 +56,7 @@ function AdminDashboard() {
         setOrders(ordersData);
       }
     );
+
     // Cleanup function to unsubscribe from listeners
     // Prevent memory leaks
     return () => {
@@ -144,7 +149,7 @@ function AdminDashboard() {
 
     try {
       const newSection = { category: newSectionName, items: [] };
-      const sectionRef = doc(collection(db, "menu"));
+      const sectionRef = doc(collection(db, "menu")); 
       await setDoc(sectionRef, newSection);
 
       toast.success("New section added successfully!", { position: "top-right", autoClose: 2000 });

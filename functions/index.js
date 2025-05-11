@@ -35,7 +35,7 @@ exports.sendOrderReceipt = functions.firestore
     const msg = {
       to: order.email,
       from: 'replies.jay@gmail.com', // Verified SendGrid sender
-      subject: `KADU Order Receipt #${context.params.orderId}`, // Fixed template literal
+      subject: `JAY Chicken Order Receipt #${context.params.orderId}`, // Fixed template literal
       html: `
         <h1>Thank you for your order, ${order.customerName || 'Customer'}!</h1>
         <h2>Order #${context.params.orderId}</h2>
