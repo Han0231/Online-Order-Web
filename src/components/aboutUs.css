@@ -1,0 +1,108 @@
+/* General Container */
+.about-us-container {
+  padding: 80px 20px; /* Reduced padding for a more compact layout */
+  text-align: center;
+  background: linear-gradient(90deg, #ffffff, #e8ffe8, #ffffff); /* White to soft green gradient */
+  color: #333; /* Dark gray text for readability */
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in animation */
+  border-top: 8px solid #006400; /* Slightly thinner dark green border */
+}
+
+/* Header Section */
+.about-us-header h1 {
+  font-size: 2.5rem; /* Reduced font size */
+  margin-bottom: 15px; /* Reduced margin */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* Slightly reduced letter spacing */
+  color: #006400; /* Dark green for the header */
+  animation: slideDown 1s ease-in-out; /* Slide-down animation */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.about-us-header h1:hover {
+  color: #ffd700; /* Change to yellow on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Content Section */
+.about-us-content {
+  max-width: 700px; /* Reduced max width for a more compact layout */
+  margin: 0 auto;
+  font-size: 1.1rem; /* Slightly smaller font size */
+  line-height: 1.6; /* Reduced line height for tighter spacing */
+  color: #444; /* Medium gray for content text */
+  background: #f9f9f9; /* Light gray background for contrast */
+  padding: 25px; /* Reduced padding */
+  border-radius: 12px; /* Slightly smaller border radius */
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.about-us-content .restaurant-name {
+  font-weight: bold;
+  color: #ffd700; /* Yellow for emphasis */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.about-us-content .thank-you {
+  margin-top: 15px; /* Reduced margin */
+  font-size: 1.2rem; /* Slightly smaller font size */
+  font-style: italic;
+  color: #006400; /* Dark green for thank-you text */
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+/* Footer Section */
+.about-us-footer {
+  margin-top: 40px; /* Reduced margin */
+  font-size: 0.85rem; /* Slightly smaller font size */
+  color: #ffffff; /* White text for contrast */
+  background: linear-gradient(90deg, #006400, #004d00); /* Gradient green footer */
+  padding: 12px; /* Reduced padding */
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
+}
+
+/* Image Section */
+.about-us-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-us-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-15px); /* Reduced slide distance */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Button-Like Hover Effect for Header */
+.about-us-header h1:hover {
+  color: #ffd700; /* Change to yellow on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  transition: all 0.3s ease-in-out;
+}

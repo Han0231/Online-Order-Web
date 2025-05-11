@@ -1,0 +1,336 @@
+/* General Styles */
+
+.signup-page {
+  min-height: 100vh; /* Use min-height instead of height */
+  overflow: hidden; /* Prevent extra scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.signup-container {
+  margin-top: 50px; /* Remove unnecessary margin */
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.signup-title {
+  text-align: center;
+  font-family: "Outfit-SemiBold", sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.label {
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: "Outfit-Regular", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-bottom: 2px solid #8b2424;
+}
+
+/* Buttons */
+.button2 {
+  width: 100%;
+  background-color:#698976;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
+  color: #fff;
+  font-family: "Outfit-SemiBold", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button2:hover {
+  background: #2a6e41;
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.success-message {
+  color: #388e3c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Footer Links */
+.not-a-member {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.not-a-member a {
+  color: #8b2424;
+  text-decoration: none;
+}
+
+.not-a-member a:hover {
+  text-decoration: underline;
+}
+
+/* Social Login */
+.social-login {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.social-login p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons img {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 1rem; /* Reduced margin to minimize space above the footer */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .signup-page {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    justify-content: flex-start; /* Align content to the top */
+  }
+
+  .signup-container {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+    max-width: 90%; /* Ensure it fits within the screen */
+    box-shadow: none; /* Remove shadow for a cleaner look */
+  }
+
+  .signup-title {
+    font-size: 1.8rem; /* Reduce font size */
+    margin-bottom: 1rem; /* Adjust spacing */
+  }
+
+  .input-group {
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 0.5rem; /* Add spacing between elements */
+  }
+
+  .icon {
+    margin-bottom: 0.5rem; /* Add spacing below the icon */
+  }
+
+  .label {
+    margin-bottom: 0.5rem; /* Add spacing below the label */
+  }
+
+  .input-field {
+    font-size: 0.9rem; /* Reduce font size */
+    padding: 0.6rem; /* Adjust padding */
+  }
+
+  .button2 {
+    font-size: 0.9rem; /* Reduce font size */
+    padding: 0.6rem; /* Adjust padding */
+  }
+
+  .social-icons img {
+    width: 1.8rem; /* Adjust icon size */
+    height: 1.8rem;
+  }
+
+  .footer {
+    font-size: 0.8rem; /* Adjust font size */
+    margin-top: 0.5rem; /* Reduce spacing above the footer */
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 0.5rem; /* Further reduce padding */
+    justify-content: flex-start; /* Align content to the top */
+  }
+
+  .signup-container {
+    padding: 1rem; /* Further reduce padding */
+    max-width: 95%; /* Ensure it fits within the screen */
+  }
+
+  .signup-title {
+    font-size: 1.5rem; /* Further reduce font size */
+    margin-bottom: 0.8rem; /* Adjust spacing */
+  }
+
+  .input-field {
+    font-size: 0.8rem; /* Further reduce font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .button2 {
+    font-size: 0.8rem; /* Further reduce font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .social-icons img {
+    width: 1.5rem; /* Further reduce icon size */
+    height: 1.5rem;
+  }
+
+  .footer {
+    font-size: 0.7rem; /* Further reduce font size */
+    margin-top: 0.5rem; /* Adjust spacing above the footer */
+  }
+}/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .signup-page {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    justify-content: flex-start; /* Align content to the top */
+  }
+
+  .signup-container {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+    max-width: 90%; /* Ensure it fits within the screen */
+    box-shadow: none; /* Remove shadow for a cleaner look */
+  }
+
+  .signup-title {
+    font-size: 1.8rem; /* Reduce font size */
+    margin-bottom: 1rem; /* Adjust spacing */
+  }
+
+  .input-group {
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 0.5rem; /* Add spacing between elements */
+  }
+
+  .icon {
+    margin-bottom: 0.5rem; /* Add spacing below the icon */
+  }
+
+  .label {
+    margin-bottom: 0.5rem; /* Add spacing below the label */
+  }
+
+  .input-field {
+    font-size: 0.9rem; /* Reduce font size */
+    padding: 0.6rem; /* Adjust padding */
+  }
+
+  .button2 {
+    font-size: 0.9rem; /* Reduce font size */
+    padding: 0.6rem; /* Adjust padding */
+  }
+
+  .social-icons img {
+    width: 1.8rem; /* Adjust icon size */
+    height: 1.8rem;
+  }
+
+  .footer {
+    font-size: 0.8rem; /* Adjust font size */
+    margin-top: 0.5rem; /* Reduce spacing above the footer */
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 0.5rem; /* Further reduce padding */
+    justify-content: flex-start; /* Align content to the top */
+  }
+
+  .signup-container {
+    padding: 1rem; /* Further reduce padding */
+    max-width: 95%; /* Ensure it fits within the screen */
+  }
+
+  .signup-title {
+    font-size: 1.5rem; /* Further reduce font size */
+    margin-bottom: 0.8rem; /* Adjust spacing */
+  }
+
+  .input-field {
+    font-size: 0.8rem; /* Further reduce font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .button2 {
+    font-size: 0.8rem; /* Further reduce font size */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .social-icons img {
+    width: 1.5rem; /* Further reduce icon size */
+    height: 1.5rem;
+  }
+
+  .footer {
+    font-size: 0.7rem; /* Further reduce font size */
+    margin-top: 0.5rem; /* Adjust spacing above the footer */
+  }
+}

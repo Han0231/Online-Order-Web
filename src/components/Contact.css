@@ -1,0 +1,287 @@
+/* Contact Us Section */
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: black;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 125px; /* Push content below the fixed Navbar */
+  box-sizing: border-box;
+  padding-left: 15px; /* Ensuring equal padding on left */
+  padding-right: 15px; /* Ensuring equal padding on right */
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* Space between left and right columns */
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding-left: 15px; /* Equal left padding */
+  padding-right: 15px; /* Equal right padding */
+}
+
+.contact-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Equal width for both columns */
+  margin-bottom: 20px;
+  padding-left: 15px; /* Equal left padding */
+  padding-right: 15px; /* Equal right padding */
+}
+
+/* Subheader */
+.subheader {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Contact Item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  color: black;
+}
+
+/* Location Section */
+.location-section {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.location-iframe {
+  width: 700px;
+  height: 450px; /* Set the height */
+  border: 2px solid black; /* Add a border */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+/* Hours Section */
+.hours-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hours {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 30px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .contact-us {
+    padding: 15px; /* Reduce padding for smaller screens */
+    margin-top: 100px; /* Adjust spacing below the navbar */
+    width: 87%; /* Ensure it spans the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+    gap: 20px; /* Add spacing between stacked columns */
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding-left: 15px; /* Ensure left padding */
+    padding-right: 15px; /* Ensure right padding */
+  }
+
+  .contact-column {
+    width: 100%; /* Make columns take full width */
+    padding: 15px; /* Add padding for better spacing */
+    background-color: #ffffff; /* Add a white background for better contrast */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding-left: 15px; /* Ensure equal padding on left */
+    padding-right: 15px; /* Ensure equal padding on right */
+  }
+
+  .subheader {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+    margin-bottom: 15px; /* Adjust spacing */
+  }
+
+  .contact-item {
+    margin-left: 10px;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Add spacing between icon and text */
+    width: 100%; /* Ensure it spans the full width */
+  }
+
+  .icon {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+  }
+
+  .contact-text {
+    font-size: 1rem; /* Reduce font size */
+    text-align: center; /* Center-align text */
+  }
+
+  .location-iframe {
+    max-width: 660px; /* Set a maximum width */
+    height: 350px; /* Set the height */
+    margin: 0 auto; /* Center iframe */
+  }
+
+  .hours {
+    font-size: 1rem; /* Reduce font size */
+    margin-top: 10px;
+  }
+
+  .footer {
+    font-size: 0.9rem; /* Reduce footer font size */
+    text-align: center; /* Center-align footer text */
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us {
+    padding: 8px; /* Reduce padding further */
+    margin-top: 120px; /* Adjust spacing below the navbar */
+    width: 95%; /* Slightly reduce width for better fit */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+    gap: 10px; /* Reduce spacing between stacked columns */
+    width: 100%; /* Ensure it spans the full width */
+    padding-left: 15px; /* Equal left padding */
+    padding-right: 15px; /* Equal right padding */
+  }
+
+  .contact-column {
+    padding: 3px; /* Reduce padding */
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #ffffff; /* Add a white background for better contrast */
+    border-radius: 6px; /* Slightly reduce border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .subheader {
+    font-size: 1.3rem; /* Adjust font size for readability */
+    margin-bottom: 12px;
+  }
+
+  .location-section {
+    font-size: 1rem; /* Reduce font size */
+    margin-bottom: 20px; /* Adjust spacing */
+  }
+
+  .location-iframe {
+    max-width: 400px; /* Set a maximum width */
+    height: 350px; /* Adjust height */
+    margin: 0 auto; /* Center iframe */
+  }
+
+  .hours-section {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hours {
+    font-size: 0.95rem; /* Reduce font size */
+    margin-top: 8px;
+  }
+
+  .footer {
+    font-size: 0.8rem; /* Further reduce footer font size */
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+@media (max-width: 380px) {
+  .contact-us {
+    padding: 8px; /* Reduce padding further */
+    margin-top: 120px; /* Adjust spacing below the navbar */
+    width: 85%; /* Slightly reduce width for better fit */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+    gap: 10px; /* Reduce spacing between stacked columns */
+    width: 100%; /* Ensure it spans the full width */
+    padding-left: 15px; /* Equal left padding */
+    padding-right: 15px; /* Equal right padding */
+  }
+
+  .contact-column {
+    padding: 3px; /* Reduce padding */
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #ffffff; /* Add a white background for better contrast */
+    border-radius: 6px; /* Slightly reduce border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .subheader {
+    font-size: 1.3rem; /* Adjust font size for readability */
+    margin-bottom: 12px;
+  }
+
+  .location-section {
+    font-size: 1rem; /* Reduce font size */
+    margin-bottom: 20px; /* Adjust spacing */
+  }
+
+  .location-iframe {
+    max-width: 370px; /* Set a maximum width */
+    height: 350px; /* Adjust height */
+    margin-left: 17px; /* Center iframe */
+  }
+
+  .hours-section {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hours {
+    font-size: 0.95rem; /* Reduce font size */
+    margin-top: 8px;
+  }
+
+  .footer {
+    font-size: 0.8rem; /* Further reduce footer font size */
+    margin-top: 15px;
+    text-align: center;
+  }
+}

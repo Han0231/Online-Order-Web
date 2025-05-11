@@ -1,0 +1,281 @@
+/* General Styles */
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+/* Sidebar Menu */
+.menu_section {
+  background: rgba(162, 155, 155, 0.215);
+  padding: 50px 4px 23px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 280px;
+  height: 100vh; /* Extend the background to the full height of the viewport */
+  position: fixed; /* Keep the menu fixed while scrolling */
+  left: 0px;
+  top: 80px; /* Adjust to account for the fixed Navbar */
+  overflow-y: auto; /* Add scrolling if the content exceeds the viewport height */
+}
+
+.menu_section div {
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.menu_section div:hover {
+  color: #124714;
+  font-weight: bold;
+}
+
+/* Food Section */
+.food-section {
+  padding-top: 7rem;
+  margin-left: 300px; /* Push content to the right of the sidebar */
+  margin-bottom: 3rem;
+  width: calc(100% - 300px); /* Take up the remaining space after the sidebar */
+  overflow-y: auto; /* Allow scrolling for the main content */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.category-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000; /* White text for consistency */
+  text-transform: uppercase;
+}
+
+/* Food Grid */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  width: 100%; /* Ensure the grid fits within the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Food Box */
+.food-box {
+  background: #ffffff; /* White background for contrast */
+  border: 1px solid #006400; /* Green border */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 285px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-box:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.food-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.food-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.food-name {
+  color: #000000; /* White text for better contrast */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.food-name:hover {
+  color: #a3e635; /* Light green hover effect */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.food-price {
+  font-size: 18px;
+  color: #000000; /* Bright red for emphasis */
+  font-weight: bold;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  width: 100%;
+  background: #d7d7d7; /* Red button */
+  color: rgb(0, 0, 0);
+  border: 13px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart:hover {
+  background: #90ca99; /* Lighter red on hover */
+  transform: scale(1.02); /* Slight zoom effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.add-to-cart:active {
+  transform: scale(0.95); /* Slight shrink on click */
+}
+
+
+/* Footer */
+.section {
+  padding: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 100px;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu_section {
+    width: 175px;
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  .menu_section div {
+  font-size: 14px; /* Adjust the font size as needed */
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  text-align: left ;
+  }
+
+  .food-section {
+    margin-left: 210px; /* Adjust for smaller sidebar */
+    width: calc(100% - 220px);
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 items per row */
+    gap: 15px;
+  }
+
+  .food-box {
+    width: 240px;
+  }
+
+  .food-image {
+    height: 200px;
+  }
+
+  .add-item-form {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu_section {
+    width: 100px;
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  .menu_section div {
+  font-size: 14px; /* Adjust the font size as needed */
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  text-align: left ;
+  }
+  
+  .food-section {
+    margin-left: 120px; /* Adjust for smaller sidebar */
+    width: calc(100% - 120px);
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 items per row */
+    gap: 15px;
+  }
+
+  .food-box {
+    width: 240px;
+  }
+
+  .food-image {
+    height: 200px;
+  }
+
+  .add-item-form {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .menu_section {
+    width: 100px;
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  .menu_section div {
+  font-size: 14px; /* Adjust the font size as needed */
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  text-align: left ;
+  }
+  
+  .food-section {
+    margin-left: 117px; /* Adjust for smaller sidebar */
+    width: calc(100% - 120px);
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 items per row */
+    gap: 15px;
+  }
+
+  .food-box {
+    width: 220px;
+  }
+
+  .food-image {
+    height: 200px;
+  }
+
+  .add-item-form {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
